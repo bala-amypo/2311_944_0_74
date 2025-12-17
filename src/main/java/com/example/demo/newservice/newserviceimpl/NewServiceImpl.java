@@ -22,6 +22,13 @@ public class NewfileServiceImpl implements NewfileService{
     public NewfileEntity getidval(Long id){
         return rep.findByid(id)
     }
+    @Override
+    public List<NewfileEntity> getall(){
 
-    
+    }
+    @Override
+    public NewfileEntity update(Long id , NewfileEntity newfile){
+        
+    }
+
 }
