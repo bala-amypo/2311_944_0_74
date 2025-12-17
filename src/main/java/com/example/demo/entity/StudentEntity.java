@@ -32,7 +32,7 @@ public class StudentEntity{
     public float getCgpa() {
         return cgpa;
     }
-    public Studententity(String name, int id, LocalDate date, float cgpa) {
+    public StudentEntity(String name, int id, LocalDate date, float cgpa) {
         this.name = name;
         this.id = id;
         this.date = date;
