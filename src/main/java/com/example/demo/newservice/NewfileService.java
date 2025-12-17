@@ -1,5 +1,6 @@
 package com.example.demo.newservice;
 
-public class NewfileService{
-    
+public interface NewfileService{
+    NewfileEntity savedata
+
 }
