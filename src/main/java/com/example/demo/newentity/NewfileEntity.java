@@ -14,7 +14,7 @@ public class NewfileEntity{
     @NotBlank(message="Should not contain spaces")
     private String name;
     @NotBlank(message="no blank spaces")
-    @Email(message="invalid")
+    @Email(message="invalid format")
     private String email;
     public NewfileEntity(Long id, @NotBlank(message = "Should not contain spaces") String name,
             @NotBlank(message = "no blank spaces") @Email(message = "invalid") String email) {
