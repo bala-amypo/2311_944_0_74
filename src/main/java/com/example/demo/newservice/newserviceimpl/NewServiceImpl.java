@@ -3,6 +3,8 @@ package com.example.demo.newservice.newserviceimpl;
 import java.util.List;
 import org.springframework.steretype.Service;
 import com.example.demo.newservice.NewfileService;
+import com.example.demo.newrepository.NewfileRepo;
+import com.example.demo.newservice.NewfileService;
 
 @Service
 public class NewfileServiceImpl implements NewfileService{
@@ -18,6 +20,8 @@ public class NewfileServiceImpl implements NewfileService{
     }
     @Override
     public NewfileEntity getidval(Long id){
-        return rep.getid(id)
+        return rep.findByid(id)
     }
+
+    
 }
