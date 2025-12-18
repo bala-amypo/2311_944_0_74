@@ -12,12 +12,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.entity.StudentEntity;
-import com.example.demo.service.Studentservice;
+import com.example.demo.service.StudentService;
 
 @RestController
 public class StudentController {
     @Autowired
-    Studentservice src;
+    StudentService src;
     @PostMapping("/post")
     public StudentEntity postdata(@RequestBody StudentEntity st){
         return src.savedata(st);
