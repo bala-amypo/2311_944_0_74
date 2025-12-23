@@ -10,6 +10,7 @@ import java.util.List;
 public class ClaimController {
 
     private final ClaimService claimService;
+    private Policy policy;
 
     public ClaimController(ClaimService claimService) {
         this.claimService = claimService;
