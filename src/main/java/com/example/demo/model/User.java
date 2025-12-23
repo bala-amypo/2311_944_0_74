@@ -1,42 +1,36 @@
-package com.example.demo.entity;
+package com.example.demo.model;
 
-import java.time.LocalDate;
+import jakarta.persistence.*;
+import java.util.List;
 
-public class Studententity {
+@Entity
+@Table(name = "users")
+public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     private String name;
-    private int id;
-    private LocalDate date;
-    private float cgpa;
-    
-    public Studententity(String name, int id, LocalDate date, float cgpa) {
+
+    @Column(unique = true)
+    private String email;
+
+    private String password;
+
+    private String role = "USER";
+
+    @OneToMany(mappedBy = "user")
+    private List<Policy> policies;
+
+    public User() {}
+
+    public User(String name, String email, String password, String role) {
         this.name = name;
-        this.id = id;
-        this.date = date;
-        this.cgpa = cgpa;
+        this.email = email;
+        this.password = password;
+        if (role != null) this.role = role;
     }
-    
-    public String getName() {
-        return name;
-    }
-    public void setName(String name) {
-        this.name = name;
-    }
-    public int getId() {
-        return id;
-    }
-    public void setId(int id) {
-        this.id = id;
-    }
-    public LocalDate getDate() {
-        return date;
-    }
-    public void setDate(LocalDate date) {
-        this.date = date;
-    }
-    public float getCgpa() {
-        return cgpa;
-    }
-    public void setCgpa(float cgpa) {
-        this.cgpa = cgpa;
-    }
+
+    // Getters and Setters
+    // ...
 }
